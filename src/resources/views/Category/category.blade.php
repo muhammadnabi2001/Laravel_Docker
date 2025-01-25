@@ -42,7 +42,7 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>
-                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                            <button class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#updateModal{{ $category->id }}">Update</button>
                             <div class="modal fade" id="updateModal{{ $category->id }}" tabindex="-1"
                                 aria-labelledby="updateModalLabel{{ $category->id }}" aria-hidden="true">
@@ -70,12 +70,11 @@
                                     </div>
                                 </div>
                             </div>
-
                             <form action="{{ route('categories.destroy', $category->id) }}" method="POST"
                                 class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
 
                         </td>
